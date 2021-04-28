@@ -1,0 +1,19 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "10:00"
+  pull-request-branch-name:
+    separator: "-"
+  open-pull-requests-limit: 10
+  allow:
+  - dependency-name: ws
+  - dependency-name: express
+  ignore:
+  - dependency-name: ws
+    versions:
+    - 7.4.2
+    - 7.4.3
+    - 7.4.4
